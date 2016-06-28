@@ -7,4 +7,58 @@
 	<!-- Place the AngularJS script tag here -->
 	<!-- Place the app.js script tag here -->
 </body>
+</html><!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+   
+    <link rel="stylesheet" href="style.css" />
+    <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.9/angular.js" data-semver="1.4.9"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-app="app" ng-controller="mycontroller as vm">
+    <form name="waitlistform" novalidate>
+	<div>
+		<div id="divA">
+			  <div>
+				<span>Base Meal Price:</span><input style="text-align:right" type="number" ng-bing="vm.mealPrice" >
+			  </div>
+			  <div>
+				<span>Tax Rate: %</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+				<input style="text-align:right" type="number" ng-model="vm.taxRate" >
+			  </div>
+			  
+			  <div>
+				<span>Tip Percentage: %</span><input style="text-align:right" type="number" ng-model="vm.tippercrate" >
+			  </div>
+			  
+			  <div>
+				<span>Tip Percentage: %</span><input type="button" value="submit" ><input type="button" value="cancel" >
+			  </div>
+		</div>
+		
+		<div id="divB">
+			  <div>
+				<span>Sub Total:</span>{{vm.subTotal}}
+			  </div>
+			  <div>
+				<span>Tip: </span>&nbsp;&nbsp;&nbsp;&nbsp
+				      {{mealPrice}}
+			  </div>
+			  
+			  <div>
+				<span>Total: </span> {{vm.total}}
+			  </div>
+			  
+		</div>
+		
+		
+	</div>
+	
+	</form>
+  </body>
+
 </html>
